@@ -28,9 +28,9 @@ jobs:
         uses: docker/metadata-action@v3
         with:
           images: capino/php8.0-fpm
-        tags: |
-          type=sha,prefix={{branch}}-
-          type=raw,value=latest
+          tags: |
+            type=sha,prefix={{branch}}-
+            type=raw,value=latest
 
       - name: Build and push
         uses: docker/build-push-action@v2
