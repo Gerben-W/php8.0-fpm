@@ -20,6 +20,6 @@ jobs:
         DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
       run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag php8.0-fpm:$(date +%s)
+      run: docker build . --file Dockerfile --tag capino/php8.0-fpm:$(date +%s)
     - name: Docker Push
-      run: docker push ${{secrets.DOCKER_USER}}/php8.0-fpm:$(date +%s)
+      run: docker push ${{secrets.DOCKER_USER}}/php8.0-fpm
