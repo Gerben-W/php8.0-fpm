@@ -1,8 +1,9 @@
-#update:28-04-2022
+#update:01-01-2024
 
 FROM php:8.0-fpm
 RUN apt-get update && apt-get install -y \
         libfreetype6-dev \
         libjpeg62-turbo-dev \
         libpng-dev \
-    && docker-php-ext-install mysqli pdo_mysql
+    && docker-php-ext-install mysqli pdo_mysql \
+    && apt-get clean
